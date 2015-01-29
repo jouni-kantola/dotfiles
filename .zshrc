@@ -14,6 +14,7 @@ ZSH_THEME="rixius"
 
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
+alias whatismyip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
