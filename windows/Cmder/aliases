@@ -1,11 +1,14 @@
-c.=code .
-e.=explorer .
+gw=grunt && grunt watch
+clean-project=rimraf node_modules\ && npm install && grunt
+
+..=cd ..
+c=code $*
+e=explorer $*
 vs=nircmdc elevate "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
-gl=git log --oneline --all --graph --decorate  $*
-l=ls -lah --color $*
+l=ls -lah --color $* | cut -d" " -f6-
 pwd=cd
 clear=cls
-repos=cd \repos
-clean-project=rimraf node_modules\ && npm install && grunt
-bw=grunt && grunt watch
-ga=git add -A
+gl=git log --oneline --all --graph --decorate $*
+gac=git add --all && git commit -m $*
+gs=git status -s
+gam=git add --all && git commit --amend
